@@ -48,6 +48,7 @@ func main() {
 			fmt.Printf("ERROR: Failed to write to output file. %v\n", err)
 			os.Exit(1)
 		}
+		zout.Close()
 	} else if *extract {
 		zin, err := zlib.NewReader(in)
 		if err != nil {
